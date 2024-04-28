@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Showcase</title>
+    <style>
+        body, html { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header, footer { background-color: #333; color: white; text-align: center; padding: 10px 0; }
+        nav { background: #555; padding: 10px 0; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        main { padding: 20px; }
+        .content { margin: 20px; }
+        .car { margin-bottom: 30px; }
+        .car img { width: 100%; height: auto; }
+        form { margin-top: 20px; }
+        label, input, textarea { display: block; width: 90%; margin: 10px auto; }
+        input, textarea { padding: 10px; }
+        button { padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Automobile Showcase</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#automobiles">Automobiles</a>
+        <a href="#booking">Booking</a>
+        <a href="#appointment">Tour Appointment</a>
+    </nav>
+
+    <main>
+        <section id="home" class="content">
+            <h2>Home</h2>
+            <p>Welcome to our premier automobile website where you can find your dream car, book a vehicle, or schedule a tour appointment to visit our facility.</p>
+        </section>
+
+        <section id="about" class="content">
+            <h2>About Us</h2>
+            <p>Founded in 2024, Our Automobile Company has been at the forefront of the automotive industry, providing high-quality vehicles and exceptional customer service.</p>
+        </section>
+
+        <section id="automobiles" class="content">
+            <h2>Our Cars</h2>
+            <div class="car">
+                <h3>Car Model 1</h3>
+                <img src="https://via.placeholder.com/400x300" alt="Car Model 1">
+                <p>Description of Car Model 1. This is a great car with excellent performance, reliability, and comfort.</p>
+            </div>
+            <div class="car">
+                <h3>Car Model 2</h3>
+                <img src="https://via.placeholder.com/400x300" alt="Car Model 2">
+                <p>Description of Car Model 2. Experience luxury and speed with this top-of-the-line model.</p>
+            </div>
+        </section>
+
+        <section id="booking" class="content">
+            <h2>Book a Vehicle</h2>
+            <form>
+                <label for="model">Car Model</label>
+                <input type="text" id="model" name="model" required>
+
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </section>
+
+        <section id="appointment" class="content">
+            <h2>Schedule a Tour</h2>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="visitdate">Visit Date</label>
+                <input type="date" id="visitdate" name="visitdate" required>
+
+                <button type="submit">Schedule Tour</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Our Automobile Company</p>
+    </footer>
+
+    <script>
+        // Simple form submission alert
+        document.querySelectorAll('form').forEach(form => {
+            form.onsubmit = function(event) {
+                event.preventDefault();
+                alert('Thank you for your submission. We will get back to you shortly.');
+            }
+        });
+    </script>
+</body>
+</html>
